@@ -1,4 +1,4 @@
 "use sctrict";
 
-const result = confirm("Are you here?");
-console.log(result);
+const numbersOfFilms = prompt("How many films have you already watched?");
+console.log(numbersOfFilms);
