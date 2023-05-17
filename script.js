@@ -16,8 +16,7 @@ const personalMovieDB = {
 for(let i = 0; i < numbersOfFilms; i++){
     const nameMovie = prompt("How the Movie call?");
     const gradeForMovie = prompt("How much do you rate?");
-    console.log(nameMovie.length);
-    console.log(gradeForMovie.length);
+
     if(nameMovie.length < 1 || nameMovie.length > 50 || gradeForMovie.length < 1 || gradeForMovie > 10){
         alert('Not correctly, to write again!');
         i--;
@@ -25,6 +24,16 @@ for(let i = 0; i < numbersOfFilms; i++){
     else
     movie[nameMovie] = gradeForMovie;
 }
+
+if(personalMovieDB.count < 10){
+    alert('You watched really few films');
+} else if (personalMovieDB.count >= 10 && personalMovieDB.count <= 30 ){
+    alert('You the classic viewer')
+} else if( personalMovieDB.count > 30){
+    alert('You the Pokemono!')
+} else 
+    alert('ERROR!');
+
 
 console.log(personalMovieDB);
 
