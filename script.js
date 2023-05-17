@@ -12,9 +12,12 @@ const personalMovieDB = {
     privat: false
 
 };
-const nameMovie = prompt("One of the last movies you watched?");
-const gradeForMovie = prompt("How much do you rate?");
-movie[nameMovie] = gradeForMovie;
+
+for(let i = 0; i < numbersOfFilms; i++){
+    const nameMovie = prompt("How the Movie call?");
+    const gradeForMovie = prompt("How much do you rate?");
+    movie[nameMovie] = gradeForMovie;
+}
 
 console.log(personalMovieDB);
 
