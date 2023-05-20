@@ -16,8 +16,8 @@ function rememberMyFilms (){
         const gradeForMovie = prompt("How much do you rate?");
     
         if(nameMovie == null || gradeForMovie == null || nameMovie.length < 1 || 
-            nameMovie.length > 50 || gradeForMovie.length < 1 || gradeForMovie > 10 ||
-            isNaN(gradeForMovie)){
+            nameMovie.length > 50 || gradeForMovie < 0 || gradeForMovie > 10 ||
+            isNaN(gradeForMovie)) {
             alert('Not correctly, to write again!');
             i--;
         }
@@ -45,10 +45,10 @@ function writeMyDb () {
 }
 
 function writeYourGenres () {
-    for(let i = 0; i < 3; i++){
-        const answer = prompt("Your favorite genre?");
-        if(answer > 0 && answer < 4)
-        array[i] = answer;
+    for(let i = 1; i <= 3; i++){
+        const answer = prompt(`Your favorite ${i} genre?`);
+        if(isNaN(answer))
+        array[i - 1] = answer;
         else {
             alert('Not HAVE? again');
             i--;
